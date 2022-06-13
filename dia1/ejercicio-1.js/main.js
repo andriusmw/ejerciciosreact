@@ -28,7 +28,7 @@ const span1 = document.createElement("span")
 
 */
 
-
+/*************solucion 2 
 const root = document.querySelector("#root");
 
 const section = React.createElement("section",
@@ -46,5 +46,21 @@ const section = React.createElement("section",
 //Le indica que cree un elemento section
 //con clase container y  de elementos hijos
 //le pasamos los scripts para crear otros elementos de react  que tiene nombre de elemento y lo que tiene de hijo como texto u otro elemento.
+*/
+
+const classname = "container";
+const firstChildren = "Hello ";
+const secondChildren = "World3";
+
+const section = (
+    <section className={classname}>
+
+        <span>{firstChildren} </span> 
+        <span>{secondChildren} </span>
+    </section>
+);
+
 
 ReactDOM.render(section,root)
+
+
