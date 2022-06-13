@@ -8,6 +8,7 @@
  * 
  */
 
+/*-----------Solución 1
  const div = document.createElement("div");
  const section = document.createElement("section")
  section.className += "container"
@@ -25,18 +26,18 @@ const span1 = document.createElement("span")
  section.appendChild(span1);
  section.appendChild(span2);
 
+*/
 
 
+const root = document.querySelector("#root");
 
-
-
-/*
- const root = document.querySelector("#root");
- const div = React.createElement("p",{
- className: "text",
- children: "Hello world2",
- });
- 
- ReactDOM.render(p, root)
- //primer parámetro es lo que quieres pintar
- //segundo parámetro es donde lo quieres pintar*/
+const section = React.createElement("section",
+{
+    className: "container",
+    children: 
+        [React.createElement("span",
+         {children: "Hello"}),
+        React.createElement("span", 
+        {children: "world"})
+]
+})
