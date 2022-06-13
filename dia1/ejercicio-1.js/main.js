@@ -46,3 +46,5 @@ const section = React.createElement("section",
 //Le indica que cree un elemento section
 //con clase container y  de elementos hijos
 //le pasamos los scripts para crear otros elementos de react  que tiene nombre de elemento y lo que tiene de hijo como texto u otro elemento.
+
+ReactDOM.render(section,root)
