@@ -16,11 +16,14 @@ const Entry = ({ data }) => {
   );
 };
 
+const entriesArray = entries.map((entryObject) => {
+  return <Entry key={entryObject.id} data={entryObject}/>
+})
+
 function App() {
   return (
     <div className="App">
-      <Entry data={entries[0]} />
-      <Entry data={entries[1]} />
+      {entriesArray}
     </div>
   );
 }
