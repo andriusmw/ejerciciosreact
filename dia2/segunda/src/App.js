@@ -3,11 +3,16 @@ import './App.css';
 import entries from "./entries.json"
 
 
-const Entry = ({ className, children, color }) => {
+const Entry = ({ title, children, color }) => {
   return (
-    <p className={className} style={{ color: color, fontStyle: "italic" }}>
-      {children}
-    </p>
+   <article>
+     <h2>
+      {title}
+     </h2>
+     <p>
+       {children}
+     </p>
+   </article>
   );
 };
 
@@ -15,8 +20,8 @@ const Entry = ({ className, children, color }) => {
 function App() {
   return (
    <div className="App">
-     <Entry >
-       {entries[0].title}
+     <Entry title={entries[0].title}>
+       
        {entries[0].description}
      </Entry>
      <Entry >{entries[1].title}</Entry>
