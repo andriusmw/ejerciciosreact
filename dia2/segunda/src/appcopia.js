@@ -1,4 +1,4 @@
-import "./App.css";
+/*import "./App.css";
 import Entry from "./components/Entry";
 import List from "./components/List";
 import Counter from "./components/Counter";
@@ -8,24 +8,15 @@ import { useState } from "react";
 function App() {
   const [entries, setEntries] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
-  const [images, setImages] = useState([]);
-
 
   const fetchEntries = async () => {
     try {
-      const res = await fetch("https://dog.ceo/api/breed/hound/images");
+      const res = await fetch("http://localhost:8080/entries");
 
       const body = await res.json();
-      console.log(res.json)
-      console.log(body.data)
-      console.log(body)
-      
 
       if (res.ok) {
         setErrorMessage("");
-        console.log(body.data)
-        console.log(body.message)
-        setImages(body.message);
         return body.data;
       }
 
@@ -39,13 +30,13 @@ function App() {
     <div className="App">
       <Counter />
 
-      {images.length ? (
+      {entries.length ? (
         <List
-          data={images}
-          render={(imgUrl, index) => {
+          data={entries}
+          render={(entryObject) => {
             return (
-              <li key={index}>
-                <img src={imgUrl}></img>
+              <li key={entryObject.id}>
+                <Entry data={entryObject} />
               </li>
             );
           }}
@@ -71,4 +62,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/

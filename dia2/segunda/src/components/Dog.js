@@ -8,25 +8,19 @@ import { useState } from "react";
 function App() {
   const [entries, setEntries] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
-  const [images, setImages] = useState([]);
-
 
   const fetchEntries = async () => {
     try {
       const res = await fetch("https://dog.ceo/api/breed/hound/images");
 
       const body = await res.json();
-      console.log(res.json)
-      console.log(body.data)
       console.log(body)
-      
 
       if (res.ok) {
         setErrorMessage("");
-        console.log(body.data)
-        console.log(body.message)
-        setImages(body.message);
-        return body.data;
+        console.log(body.message);
+        return body.message;
+        
       }
 
       throw new Error(body.message);
@@ -39,13 +33,13 @@ function App() {
     <div className="App">
       <Counter />
 
-      {images.length ? (
+      {entries.length ? (
         <List
-          data={images}
-          render={(imgUrl, index) => {
+          data={entries}
+          render={(entryObject) => {
             return (
-              <li key={index}>
-                <img src={imgUrl}></img>
+              <li key={entryObject.id}>
+                <Entry data={entryObject} />
               </li>
             );
           }}
