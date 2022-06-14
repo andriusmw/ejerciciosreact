@@ -3,14 +3,14 @@
     "id": 1,
     "title": "Me fui de parranda",
     "description": "Qué bien me lo pasé!",
-    "user_name": "Pepe",
+    "userName": "Pepe",
     "photo": "https://source.unsplash.com/random"
   },
   {
     "id": 2,
     "title": "Mi viaje a Mallorca",
     "description": "Menudas calas",
-    "user_name": "María",
+    "userName": "María",
     "photo": "https://source.unsplash.com/random"
   }
 ]

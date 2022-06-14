@@ -3,15 +3,13 @@ import './App.css';
 import entries from "./entries.json"
 
 
-const Entry = ({ title, children, color }) => {
+const Entry = ({ id, title, description, userName, photo }) => {
   return (
-   <article>
-     <h2>
-      {title}
-     </h2>
-     <p>
-       {children}
-     </p>
+   <article id={id} >
+     <h2> {title}</h2>
+     <img src={photo} alt={title} />
+     <p> {description}</p>
+     <p>Created by: {userName}</p>
    </article>
   );
 };
@@ -20,10 +18,13 @@ const Entry = ({ title, children, color }) => {
 function App() {
   return (
    <div className="App">
-     <Entry title={entries[0].title}>
-       
-       {entries[0].description}
-     </Entry>
+    <Entry 
+      id={entries[0].id}
+      title={entries[0].title}
+      description={entries[0].description}
+      photo={entries[0].photo}
+      userName={entries[0].userName}
+      ></Entry>
      <Entry >{entries[1].title}</Entry>
    </div>
   );
