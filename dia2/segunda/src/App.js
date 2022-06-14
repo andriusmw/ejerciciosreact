@@ -1,5 +1,6 @@
 import "./App.css";
 import Entry from "./components/Entry";
+import List from "./components/List";
 import entries from "./entries.json";
 
 /** Componene Entry que pinte los datos de una entrada sacada del JSON */
@@ -13,7 +14,18 @@ const entriesArray = entries.map((entryObject) => {
 function App() {
   return (
     <div className="App">
-      {entriesArray}
+      <List
+        data={entries}
+        render={(entryObject) => {
+          return (
+            <li key={entryObject.id}>
+              <Entry data={entryObject}/>
+            </li>
+          )
+        }}
+        >
+
+      </List>
     </div>
   );
 }
