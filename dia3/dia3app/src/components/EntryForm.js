@@ -1,17 +1,27 @@
 import {useState} from "react";
 
 
-const EntryForm = () => {
+const EntryForm = ({setEntries} ) => {
 	const [title, setTitle] = useState("");
 	const [description, setDescription] = useState("");
+    let entryArray = [];
 
 	const createEntry = (e) => {
         e.preventDefault();
 		
-     console.log(Object.fromEntries(new FormData(e.target)));
-
+     console.log({title}, {description});
+     //añadirlo al estado del array de entradas -> setEntries
+     //llamar funcion
+        entryArray.push({title, description})
+        setEntries([{title, description}])
+        //pasa a setEntries el title y la description, setEntries es el método para actualizar el estado de entries, que está en app
+        //Luego lo cargamos con list para mostrar lo que hay en el array de entries
+        
     };
 
+   
+
+    //jsx poner llaves
 	return (
 		<form onSubmit={createEntry}>
 			<label htmlFor="title"> Title: </label>
