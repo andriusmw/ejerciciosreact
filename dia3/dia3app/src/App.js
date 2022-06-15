@@ -14,7 +14,7 @@ console.log(entries)
   return (
     <div className="App">
    
-     <EntryForm setEntries={setEntries} ></EntryForm>
+     <EntryForm entries={entries} setEntries={setEntries} ></EntryForm>
   
   
   

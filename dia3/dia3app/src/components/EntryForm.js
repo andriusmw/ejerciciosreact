@@ -1,7 +1,7 @@
 import {useState} from "react";
 
 
-const EntryForm = ({setEntries} ) => {
+const EntryForm = ({entries, setEntries} ) => {
 	const [title, setTitle] = useState("");
 	const [description, setDescription] = useState("");
     let entryArray = [];
@@ -13,7 +13,7 @@ const EntryForm = ({setEntries} ) => {
      //añadirlo al estado del array de entradas -> setEntries
      //llamar funcion
         entryArray.push({title, description})
-        setEntries([{title, description}])
+        setEntries([...entries, {title, description}])
         //pasa a setEntries el title y la description, setEntries es el método para actualizar el estado de entries, que está en app
         //Luego lo cargamos con list para mostrar lo que hay en el array de entries
         
