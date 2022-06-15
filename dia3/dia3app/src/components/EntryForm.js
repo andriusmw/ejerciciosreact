@@ -4,7 +4,7 @@ import {useState} from "react";
 const EntryForm = ({entries, setEntries} ) => {
 	const [title, setTitle] = useState("");
 	const [description, setDescription] = useState("");
-    let entryArray = [];
+    let entryArray = [];//no haria falta
 
 	const createEntry = (e) => {
         e.preventDefault();
@@ -12,10 +12,11 @@ const EntryForm = ({entries, setEntries} ) => {
      console.log({title}, {description});
      //añadirlo al estado del array de entradas -> setEntries
      //llamar funcion
-        entryArray.push({title, description})
-        setEntries([...entries, {title, description}])
+        entryArray.push({title, description})//no hace falta
+        setEntries([...entries, {title, description}])//esto si
         //pasa a setEntries el title y la description, setEntries es el método para actualizar el estado de entries, que está en app
         //Luego lo cargamos con list para mostrar lo que hay en el array de entries
+        //El spread copia los contenidos del array, asi que pasamos todas las entradas anteriores/ objetos + el objeto actual
         
     };
 
