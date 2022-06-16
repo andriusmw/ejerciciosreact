@@ -1,0 +1,39 @@
+const SearhForm = () => {
+const [playerName, setPlayerName = useState("");
+
+const fetchPlayerData = async () => {
+	try {
+	e.preventDefault();
+	const res = await fetch(´urlendpoint${´)
+	
+
+	return (
+	<form onSubmit={fetchPlayerData  >
+		<label htmlFOR="name">Character Name: </label>
+		<input type="search" 
+			id="name"
+			name="name"
+			value={playerName
+			onChange={(e) => {
+				setPlayerName(e.target.value);
+
+	</form>
+
+
+
+
+
+
+
+
+
+------------------------------
+	<header>
+		<h2>Final Fantasy 14</h2>
+	</header>
+	<main>
+		<searchForm/>
+	</main>
+	<footer>
+		<p>Hack a boss</p>
+	</footer>

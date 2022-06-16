@@ -28,6 +28,7 @@ const EntryForm = ({entries, setEntries} ) => {
 			<label htmlFor="title"> Title: </label>
 			<input id="titile" name="title" value={title} onChange={(e) => {
                 setTitle(e.target.value);
+                //two ways data binding
             }} />	
 
             <label htmlFor="description"> Title: </label>
